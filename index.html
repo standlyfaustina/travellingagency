@@ -11,27 +11,153 @@
 </head>
 <body>
    <div class="container">
-       <header>
+       <header class="nav-menu">
            <h1 class="page-header">Beautiful <span>Cities</span> </h1>
-           <a href="#">
-               <li>Home</li>
-           </a>
-           <a href="#">
-               <li>About</li>
-           </a>
-           <a href="#">
-               <li>Blog</li>
-           </a>
-           <a href="#">
-               <li>Gallery</li>
-           </a>
-           <a href="#">
-               <li>Visit</li>
-           </a>
-           <a href="#">
-               <li>Contact</li>
-           </a>
+           <ul>
+            <a href="#">
+                <li>Home</li>
+            </a>
+            <a href="#">
+                <li>About</li>
+            </a>
+            <a href="#">
+                <li>Blog</li>
+            </a>
+            <a href="#">
+                <li>Gallery</li>
+            </a>
+            <a href="#">
+                <li>Visit</li>
+            </a>
+            <a href="#">
+                <li>Contact</li>
+            </a>
+           </ul>
+           
+           <div class="header-image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum perferendis
+                inventore aut nostrum quis a enim, placeat rerum facilis cupiditate harum aspernatur itaque
+                voluptatum, eos dolor, nesciunt, amet vero praesentium soluta? Expedita accusantium quia
+                possimus porro sed cupiditate at corporis.</p>
+           </div>
        </header>
+
+       <section class="journey-ways">
+           <h2>Ways to travel with <span>Us</span> </h2>
+           <p id="journey-explain">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Minima nostrum, ducimus! Vel vero assumenda accusamus excepturi enim nemo cum ea labore sed.
+            Fugit nostrum quas adipisci laborum totam aut aspernatur vero amet nulla sunt odio distinctio
+            ullam natus soluta laboriosam blanditiis modi placeat, a, ducimus, dolore eos officiis culpa.
+            </p>
+             <div class="ways-to-travel">
+             <div class="travel-way">
+             <img src="image/Icon1.svg" alt="bus travel">
+             <h3>Travel with Bus</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
+            laboriosam nesciunt...</p>
+             </div>
+             <div class="travel-way">
+             <img src="image/Icon2.svg" alt="bus travel">
+             <h3>Travel with <span>Airplane</span></h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
+            laboriosam nesciunt...</p>
+             </div>
+             <div class="travel-way">
+             <img src="image/Icon3.svg" alt="bus travel">
+             <h3>Travel with Car</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
+            laboriosam nesciunt...</p>
+             </div>
+             </div>
+             </section>
+             
+             <section class="city-images">
+             <div class="images-of-cities">
+             <div class="city-image">
+             <img src="image/7.jpg" alt="bus travel">
+             <h3>City example 1</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
+            laboriosam nesciunt...</p>
+            
+            5/27/2020 index.html
+            view-source:file:///D:/assets/Assets project2/Project2_Finished/index.html 2/2
+             </div>
+                <div class="city-image">
+                <img src="image//2.jpg" alt="bus travel">
+                <h3>City example 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
+            laboriosam nesciunt...</p>
+                </div>
+                <div class="city-image">
+                <img src="image/3.jpg" alt="bus travel">
+             <h3>City example 3</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
+            laboriosam nesciunt...</p>
+             </div>
+             <div class="city-image">
+             <img src="image/4.jpg" alt="bus travel">
+             <h3>City example 4</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
+            laboriosam nesciunt...</p>
+             </div>
+             <div class="city-image">
+             <img src="image/5.jpg" alt="bus travel">
+             <h3>City example 5</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
+            laboriosam nesciunt...</p>
+             </div>
+             <div class="city-image">
+             <img src="image/6.jpg" alt="bus travel">
+             <h3>City example 6</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
+            laboriosam nesciunt...</p>
+             </div>
+             </div>
+             </section>
+             
+             <footer>
+             <p>&copy; Steintech 2021. All rights reserved.</p>
+             </footer>
+            
+       </section>
    </div> 
+
+   <script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
 </html>
